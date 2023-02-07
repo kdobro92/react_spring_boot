@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.web.project.mapper.AuthMapper">
+
+    <insert id="createUser" parameterType="com.web.project.dto.AuthVo">
+        INSERT INTO USERS(name, email, password, phone)
+        VALUES(#{name}, #{email}, #{password}, #{phone})
+    </insert>
+
+<!--    <select id="loginUser" parameterType="com.web.project.dto.UserLogin" resultType="int">-->
+<!--        SELECT COUNT(EMAIL) AS login_cnt FROM USERS-->
+<!--        WHERE EMAIL = #{email} AND PASSWORD = #{password}-->
+<!--    </select>-->
+
+<!--    <select id="duplicate" parameterType="com.web.project.dto.UserVo" resultType="int">-->
+<!--        SELECT COUNT(EMAIL) AS login_cnt FROM USERS-->
+<!--        WHERE EMAIL = #{email}-->
+<!--    </select>-->
+
+<!--    <select id="getUser" parameterType="com.web.project.dto.UserVo" resultType="int">-->
+<!--        SELECT-->
+<!--        id AS userId,-->
+<!--        name AS userName,-->
+<!--        email AS userEmail,-->
+<!--        password AS userPassword-->
+<!--        FROM users-->
+<!--        WHERE id = #{userId}-->
+<!--    </select>-->
+
+</mapper>
